@@ -1,0 +1,55 @@
+# FRGroup
+
+FRGroup specializes in providing insurance solutions for businesses. With over 40 years of experience and a presence in more than 90 countries, the site caters primarily to companies looking for various insurance products and financial advisory services. They offer tailored insurance solutions to protect businesses and individuals, alongside investment advisory services.
+
+## Corredores de Seguros para Empresas
+
+This section showcases the different types of insurance products available for businesses under the FRGroup banner. The offerings are designed to meet diverse needs, ensuring protection and peace of mind for companies.
+
+### Nuestros Seguros
+- **Seguro Agrícola**: Protects agricultural production and assets.
+- **Seguro Affinity**: Customized insurance tailored to unique business needs.
+- **Seguro Calidad de Vida**: Focuses on well-being, health, and security.
+- **Seguro Empresas**: Coverage to safeguard business continuity and assets.
+- **Seguro Movilidad de Flotas**: Insurance for vehicle fleets ensuring operational efficiency.
+- **Seguro Obras Públicas**: Protects public works projects.
+- **Seguros Personales**: Personal insurance for health and assets.
+- **Seguros Riesgos Financieros**: Protects against unforeseen economic impacts.
+- **Seguro Transportes Logísticos**: Safeguards logistics and transportation operations.
+- **Seguro Unidad Técnica**: Support for project management and execution.
+
+### Seguro Obligatorio SOAP
+- A mandatory health insurance required for certain business operations.
+
+### Conoce a nuestro Equipo
+An introduction to key team members, including the Director of Finances, Executive Director, General Manager, and Human Resources Manager.
+
+### Preguntas Frecuentes
+Answers to common questions about FRGroup's history, services, and investment area.
+
+## Investment: Asesoría Financiera para Empresas
+
+This section outlines financial advisory services provided by FRGroup, aimed at helping businesses manage their finances and capital.
+
+### Explore nuestra oferta de productos financieros
+- **Financiamiento para Empresas**: Access to investors and capital risk.
+- **Asesoría Financiera**: Tailored debt and business case management.
+- **Reestructuración de Pasivos**: Personalized debt restructuring strategies.
+
+### Conoce a nuestro Equipo
+Profiles of the financial team including the Director of Finances and other managerial personnel.
+
+### Preguntas Frecuentes
+Frequently asked questions about the investment services and the team.
+
+## Contacto
+
+### Corredores de Seguros
+- For inquiries related to insurance products, users can contact via email or phone.
+  
+### Investment
+- For financial products and services, contact information is also provided.
+
+## Otros
+In addition to the core services, users can find career opportunities and team information across various service lines.
+
