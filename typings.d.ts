@@ -47,6 +47,7 @@ const ColumnSectionSchema = z.object({
   textColor: z.string().optional(),
   isCarousel: z.boolean(),
   gridCols: z.string(),
+  terImage: ImageSchema.nullish(),
   columns: z.array(CardSchema),
 });
 

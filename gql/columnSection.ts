@@ -10,6 +10,16 @@ export const GQL_COLUMN_SECTION_QUERY = () => {
       textColor
       isCarousel
       gridCols
+      terImage {
+        title
+        url
+        description
+        width
+        height
+        sys {
+          id
+        }
+      }
       columnsCollection {
         items {
           name
