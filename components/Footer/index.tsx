@@ -108,7 +108,7 @@ const Footer: React.FC = () => {
                 </li>
                 <li>
                   <Link
-                    href="/politica-de-sostenibilidad"
+                    href="/politicas-de-sostenibilidad.pdf"
                     className="text-sm hover:text-destacado transition-colors"
                   >
                     Política de sostenibilidad

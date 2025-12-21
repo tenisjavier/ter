@@ -41,10 +41,11 @@ const Banner = (props: BannerT) => {
 
           <RenderIf condition={props.btnLink && props.btnText}>
             <Button
+              showArrow={true}
               size="lg"
               className={`text-lg ${props.btnBgColor && props.btnBgColor} ${
                 props.btnTextColor && props.btnTextColor
-              }  p-0 my-8 btn-light text-lg lg:text-base py-6 px-8  cursor-pointer rounded-full font-bold hover:text-white hover:bg-destacado w-fit `}
+              }  p-0 my-8 btn-light text-lg lg:text-base py-6 pl-8  cursor-pointer rounded-full font-bold hover:text-white hover:bg-destacado w-fit `}
             >
               <Link href={props.btnLink || ""}>{props.btnText}</Link>
             </Button>

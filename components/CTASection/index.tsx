@@ -30,9 +30,9 @@ const CTASection = (props: CTASectionT) => {
         } 
         ${props.image ? "lg:justify-between" : "lg:justify-start"} text-${
           props.textColor
-        } ${
-          props.reverse ? "lg:justify-end lg: items-end" : "lg:flex-row-reverse"
-        } ${props.mobileReverse ? "flex-col" : "flex-col-reverse"} `}
+        } ${props.reverse ? " lg:flex-row" : "lg:flex-row-reverse"} ${
+          props.mobileReverse ? "flex-col" : "flex-col-reverse"
+        } `}
       >
         {props.isHero
           ? props.image && (
@@ -71,7 +71,9 @@ const CTASection = (props: CTASectionT) => {
           <RenderIf condition={props.title && !props.isHero}>
             <h2
               className={`text-4xl font-light lg:text-5xl mb-6 leading-[1.2] text-left ${
-                props.reverse ? "lg:text-right" : "lg:text-left"
+                !props.reverse && !props.image
+                  ? "lg:text-right"
+                  : "lg:text-left"
               }`}
             >
               {textHighlighter(props.title || "")}
