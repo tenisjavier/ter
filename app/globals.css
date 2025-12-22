@@ -36,11 +36,11 @@
 @source inline("place-items-{start,center,end,baseline,stretch}");
 
 @theme {
-  --color-primario: oklch(21.05% 0.073 260.97);
+  --color-primario: oklch(34.89% 0.1077 253.05);
   --color-secundario: oklch(29.59% 0.077 254.42);
   --color-suave: oklch(93.82% 0.007 247.9); /* oklch(79.86% 0.005 214.33); */
   --color-blanco: oklch(100% 0 0);
-  --color-destacado: oklch(78.82% 0.0796 170.87);
+  --color-destacado: oklch(78.09% 0.1014 173.45);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);

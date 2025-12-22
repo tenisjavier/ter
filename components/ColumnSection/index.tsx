@@ -34,7 +34,7 @@ const ColumnSection = (props: ColumnSectionT) => {
             className="w-full p-0 mb-8 relative justify-center items-center mt-12"
           >
             <div className={`w-full`}>
-              <CarouselContent className="m-0 p-0 lg:px-2 ">
+              <CarouselContent className="m-0 p-0 lg:px-2 lg:mt-24 ">
                 {props.columns.map((col, index) => {
                   return (
                     <CarouselItem
