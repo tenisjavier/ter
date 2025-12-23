@@ -30,10 +30,6 @@ const menuItems: MenuItem[] = [
     description: "Inicio",
   },
   {
-    title: "Servicios",
-    href: "/servicios",
-  },
-  {
     title: "Proyectos",
     href: "/proyectos",
     children: [
@@ -54,10 +50,6 @@ const menuItems: MenuItem[] = [
   {
     title: "Conócenos",
     href: "/conocenos",
-  },
-  {
-    title: "Sustentabilidad",
-    href: "/sustentabilidad",
   },
   {
     title: "Contacto",
