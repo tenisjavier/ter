@@ -42,8 +42,16 @@ const menuItems: MenuItem[] = [
         href: "/buses-valparaiso",
       },
       {
-        title: "Buses Concepción",
-        href: "/buses-concepcion",
+        title: "Buses RBU Santiago",
+        href: "/buses-rbu-santiago",
+      },
+      {
+        title: "Buses Tocopilla",
+        href: "/buses-tocopilla",
+      },
+      {
+        title: "Buses Copiapó",
+        href: "/buses-copiapo",
       },
     ],
   },
@@ -207,7 +215,7 @@ export function MainNavigationMenu({
                     {item.title}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="md:!left-0">
-                    <ul className="grid  p-4 m-0  w-max grid-flow-col grid-rows-3 bg-secundario  rounded-lg  !bg-opacity-0 border-0">
+                    <ul className="grid  p-4 m-0  w-max grid-flow-col grid-rows-5 bg-secundario  rounded-lg  !bg-opacity-0 border-0">
                       {item.children.map((child, childIndex) => (
                         <ListItem
                           key={childIndex}
