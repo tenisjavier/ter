@@ -34,8 +34,8 @@ const menuItems: MenuItem[] = [
     href: "/proyectos",
     children: [
       {
-        title: "Buses Santiago",
-        href: "/buses-santiago",
+        title: "Buses Vule Santiago",
+        href: "/buses-vule-santiago",
       },
       {
         title: "Buses Valparaíso",
