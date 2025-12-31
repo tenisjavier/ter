@@ -31,7 +31,7 @@ const ColumnSection = (props: ColumnSectionT) => {
             opts={{
               align: "start",
             }}
-            className="w-full p-0 mb-8 relative justify-center items-center mt-12"
+            className="w-full p-0 mb-8 relative justify-center items-center "
           >
             <div className={`w-full`}>
               <CarouselContent className="m-0 p-0 lg:px-2 lg:mt-24 ">

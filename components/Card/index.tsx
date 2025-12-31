@@ -94,7 +94,7 @@ const Card = (props: CardT) => {
                 props.icon
                   ? "h-full"
                   : props.customTextHeight
-                  ? props.customTextHeight
+                  ? props.customTextHeight + " bg-primario/70"
                   : " h-30"
               }`}
             >
