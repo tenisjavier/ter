@@ -4,11 +4,11 @@ import BuilderComponent from "@/components/BuilderComponent";
 import CarouselCTA from "@/components/Carousel/page";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const pathname = "/buses-santiago";
+  const pathname = "/buses-copiapo";
   return await fetchMetaTagsFromContentful(pathname);
 }
 
 export default async function Home() {
-  const components = await fetchPageComponents("/buses-santiago");
+  const components = await fetchPageComponents("/buses-copiapo");
   return <BuilderComponent components={components}></BuilderComponent>;
 }
