@@ -15,7 +15,7 @@ import {
 const ColumnSection = (props: ColumnSectionT) => {
   const hasTerImage = props.terImage?.url;
 
-  const contentSection = (
+  const contentSection = (isCompact = false) => (
     <>
       <RenderIf condition={props.title}>
         <h2 className="text-left text-4xl w-full">
@@ -23,7 +23,9 @@ const ColumnSection = (props: ColumnSectionT) => {
         </h2>
       </RenderIf>
       <RenderIf condition={props.desc}>
-        <p className="text-left text-lg w-full mt-6">{props.desc}</p>
+        <p className="text-left text-lg w-full mt-6">
+          {textHighlighter(props.desc || "")}
+        </p>
       </RenderIf>
       <RenderIf condition={props.columns}>
         <RenderIf condition={props.isCarousel}>
@@ -31,7 +33,7 @@ const ColumnSection = (props: ColumnSectionT) => {
             opts={{
               align: "start",
             }}
-            className="w-full p-0 mb-8 relative justify-center items-center mt-12 lg:mt-0"
+            className="w-full p-0 mb-8 lg:mb-0relative justify-center items-center mt-12 lg:mt-0"
           >
             <div className={`w-full`}>
               <CarouselContent className="m-0 p-0 lg:px-2 lg:mt-24 ">
@@ -47,14 +49,14 @@ const ColumnSection = (props: ColumnSectionT) => {
                         props.gridCols === "grid-cols-4" && "lg:basis-1/4"
                       } place-items-center`}
                     >
-                      <Card {...col} key={index}></Card>
+                      <Card {...col} isCompact={isCompact} key={index}></Card>
                     </CarouselItem>
                   );
                 })}
               </CarouselContent>
             </div>
-            <CarouselPrevious className="bg-destacado active:bg-destacado active:text-white text-white mt-8 lg:mt-0  top-full lg:top-0 left-1/3 lg:left-9/10 w-10 h-10 rounded-full cursor-pointer" />
-            <CarouselNext className="bg-destacado active:bg-destacado active:text-white text-white  mt-8  lg:mt-0 top-full  lg:top-0 right-1/3 lg:right-2 w-10 h-10 rounded-full cursor-pointer" />
+            <CarouselPrevious className="bg-destacado active:bg-destacado active:text-white text-white mt-8 lg:mt-0 top-full lg:top-1/2 left-1/3 lg:-left-12 w-10 h-10 rounded-full cursor-pointer" />
+            <CarouselNext className="bg-destacado active:bg-destacado active:text-white text-white mt-8 lg:mt-0 top-full lg:top-1/2 right-1/3 lg:-right-12 w-10 h-10 rounded-full cursor-pointer" />
           </Carousel>
         </RenderIf>
         <RenderIf condition={!props.isCarousel}>
@@ -62,7 +64,7 @@ const ColumnSection = (props: ColumnSectionT) => {
             className={`grid grid-cols-1 md:grid-cols-2 lg:${props.gridCols} gap-2 mt-12 w-full place-items-center`}
           >
             {props.columns.map((col, index) => {
-              return <Card {...col} key={index}></Card>;
+              return <Card {...col} isCompact={isCompact} key={index}></Card>;
             })}
           </div>
         </RenderIf>
@@ -94,14 +96,14 @@ const ColumnSection = (props: ColumnSectionT) => {
               </div>
               {/* Content on right (desktop) / bottom (mobile) */}
               <div className="w-full lg:w-3/5 flex flex-col">
-                {contentSection}
+                {contentSection(true)}
               </div>
             </div>
           </div>
         </RenderIf>
         <RenderIf condition={!hasTerImage}>
           {/* Original layout without terImage */}
-          <div className="w-full container mx-auto">{contentSection}</div>
+          <div className="w-full container mx-auto">{contentSection()}</div>
         </RenderIf>
 
         {/* {

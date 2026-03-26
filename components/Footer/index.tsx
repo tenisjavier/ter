@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
                   Santiago (Casa Matriz)
                 </h4>
                 <p className="text-sm mb-1">
-                  La Concepción 141, Piso 8, Oficina 801, Providencia.
+                  La Concepción 191, Piso 8, Providencia.
                 </p>
                 <p className="text-sm">Teléfono: 2 2484 0000</p>
               </div>

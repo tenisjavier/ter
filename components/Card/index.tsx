@@ -28,8 +28,8 @@ const Card = (props: CardT) => {
                   props.icon
                     ? "h-full"
                     : props.customTextHeight
-                    ? props.customTextHeight + " bg-primario/70"
-                    : " h-30"
+                      ? props.customTextHeight + " bg-primario/70"
+                      : " h-30"
                 }`}
               >
                 <RenderIf condition={props.icon}>
@@ -45,13 +45,13 @@ const Card = (props: CardT) => {
                 </RenderIf>
                 <div className=" py-4 pb-4 text-white">
                   <RenderIf condition={props.title}>
-                    <h4 className="w-full text-2xl font-semibold text-center ">
-                      {textHighlighter(props.title || "")}
+                    <h4 className={`w-full font-semibold text-center ${props.isCompact ? "text-xl lg:text-lg" : "text-2xl"}`}>
+                      {textHighlighter(props.title || "", props.isCompact ? "text-2xl" : "text-4xl")}
                     </h4>
                   </RenderIf>
                   <RenderIf condition={props.desc}>
                     <span className="h-8 ">
-                      <p className="py-2 text-sm text-center ">
+                      <p className={`py-2 text-center ${props.isCompact ? "text-xs" : "text-sm"}`}>
                         {textHighlighter(props.desc || "")}
                       </p>
                     </span>
@@ -94,8 +94,8 @@ const Card = (props: CardT) => {
                 props.icon
                   ? "h-full"
                   : props.customTextHeight
-                  ? props.customTextHeight + " bg-primario/70"
-                  : " h-30"
+                    ? props.customTextHeight + " bg-primario/70"
+                    : " h-30"
               }`}
             >
               <RenderIf condition={props.icon}>
@@ -111,13 +111,13 @@ const Card = (props: CardT) => {
               </RenderIf>
               <div className="  py-4 pb-4 text-white">
                 <RenderIf condition={props.title}>
-                  <h4 className="text-2xl font-semibold text-center ">
-                    {textHighlighter(props.title || "")}
+                  <h4 className={`font-semibold text-center ${props.isCompact ? "text-xl lg:text-lg" : "text-2xl"}`}>
+                    {textHighlighter(props.title || "", props.isCompact ? "text-2xl" : "text-4xl")}
                   </h4>
                 </RenderIf>
                 <RenderIf condition={props.desc}>
                   <span className="h-8 ">
-                    <p className="py-2 text-sm text-center ">
+                    <p className={`py-2 text-center ${props.isCompact ? "text-xs" : "text-sm"}`}>
                       {textHighlighter(props.desc || "")}
                     </p>
                   </span>
@@ -190,21 +190,21 @@ const Card = (props: CardT) => {
         >
           <div>
             <RenderIf condition={props.title && !props.btnLink}>
-              <h4 className={`mb-4 text-2xl font-semibold text-center`}>
-                {textHighlighter(props.title || "")}
+              <h4 className={`mb-4 font-semibold text-center ${props.isCompact ? "text-xl lg:text-lg" : "text-2xl"}`}>
+                {textHighlighter(props.title || "", props.isCompact ? "text-2xl" : "text-4xl")}
               </h4>
             </RenderIf>
 
             <RenderIf condition={props.title && props.btnLink}>
               <Link href={props.btnLink || ""}>
-                <h4 className={`mb-4 text-2xl font-semibold text-center`}>
-                  {textHighlighter(props.title || "")}
+                <h4 className={`mb-4 font-semibold text-center ${props.isCompact ? "text-xl lg:text-lg" : "text-2xl"}`}>
+                  {textHighlighter(props.title || "", props.isCompact ? "text-2xl" : "text-4xl")}
                 </h4>
               </Link>
             </RenderIf>
 
             <RenderIf condition={props.desc}>
-              <p className="text-md line-clamp-8 text-center">
+              <p className={`line-clamp-8 text-center ${props.isCompact ? "text-sm lg:text-xs" : "text-md"}`}>
                 {textHighlighter(props.desc || "")}
               </p>
             </RenderIf>

@@ -36,7 +36,7 @@ const Banner = (props: BannerT) => {
           </RenderIf>
 
           {props.desc && (
-            <p className="text-lg lg:text-center ">{props.desc}</p>
+            <p className="text-lg lg:text-center ">{textHighlighter(props.desc)}</p>
           )}
 
           <RenderIf condition={props.btnLink && props.btnText}>

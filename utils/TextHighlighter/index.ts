@@ -6,7 +6,7 @@ import React from "react";
  * - Single brackets {text} -> <span className="font-bold">text</span>
  * - Double brackets {{text}} -> <span className="font-bold underline-z">text</span>
  */
-export function textHighlighter(text: string): React.ReactNode {
+export function textHighlighter(text: string, highlightSize = "text-4xl"): React.ReactNode {
   if (!text) return text;
 
   // Handle both literal \n and escaped \\n characters
@@ -37,7 +37,7 @@ export function textHighlighter(text: string): React.ReactNode {
     // First, handle double asterisks **text** -> text-xl text-destacado
     let processedLine = line.replace(
       /\*\*([^*]+)\*\*/g,
-      '<span className="text-4xl text-destacado">$1</span>'
+      `<span className="${highlightSize} text-destacado">$1</span>`
     );
 
     // Then, handle double brackets {{text}} -> font-bold underline

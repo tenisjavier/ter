@@ -19,7 +19,7 @@ const CTASection = (props: CTASectionT) => {
     <section
       id={props.name}
       className={`relative py-8 px-4 flex flex-col lg:flex-row ${
-        props.isHero ? "justify-center pt-20" : "min-h-[44rem] justify-center"
+        props.isHero ? "justify-center " : " justify-center "
       } min-h-[44rem] w-full items-center overflow-hidden ${
         props.bgColor && props.bgColor
       }  `}
