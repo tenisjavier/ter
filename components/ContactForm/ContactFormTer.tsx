@@ -17,7 +17,7 @@ async function createLeadCorredora(formData: FormData) {
 
   await createLeadInSupabase(
     { name, company, email, phone, message },
-    "leads-ter"
+    "leads-ter",
   );
   const { data, error } = await resend.emails.send({
     from: "informaciones@frgroup.cl",
@@ -142,7 +142,7 @@ export function ContactFormTer() {
                     </svg>
                     <span className="text-gray-700">
                       Telefono: <br></br>
-                      <span className="font-bold">+569 123 44 56</span>
+                      <span className="font-bold">+56 2 2484 0000</span>
                     </span>
                   </div>
                 </div>

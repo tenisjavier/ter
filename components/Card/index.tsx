@@ -151,22 +151,24 @@ const Card = (props: CardT) => {
       <RenderIf condition={!props.bgImage?.url}>
         {props.btnLink ? (
           <Link href={props.btnLink}>
-            {props.image && (
-              <ImageComponent
-                src={props.image.url}
-                alt={props.image.description}
-                className={`  ${
-                  props.isImageFull
-                    ? "object-cover w-sm h-64 "
-                    : "object-contain max-w-64 h-32"
-                } ${props.imageRound}`}
-                width={400}
-                height={400}
-              ></ImageComponent>
-            )}
+            <div className={`flex items-center justify-center ${props.isImageFull ? "h-64" : "h-32"}`}>
+              {props.image && (
+                <ImageComponent
+                  src={props.image.url}
+                  alt={props.image.description}
+                  className={`  ${
+                    props.isImageFull
+                      ? "object-cover w-sm h-64 "
+                      : "object-contain max-w-64 h-32"
+                  } ${props.imageRound}`}
+                  width={400}
+                  height={400}
+                ></ImageComponent>
+              )}
+            </div>
           </Link>
         ) : (
-          <>
+          <div className={`flex items-center justify-center ${props.isImageFull ? "h-64" : "h-32"}`}>
             <RenderIf condition={props.image}>
               <ImageComponent
                 src={props.image?.url || ""}
@@ -180,11 +182,11 @@ const Card = (props: CardT) => {
                 height={400}
               ></ImageComponent>
             </RenderIf>
-          </>
+          </div>
         )}
 
         <div
-          className={`w-full flex flex-col justify-between my-6 ${
+          className={`w-full flex flex-col grow justify-between my-6 ${
             props.btnLink ? "px-2 pb-4" : "px-6 py-4"
           } `}
         >
@@ -272,11 +274,13 @@ const Card = (props: CardT) => {
 
   return (
     <div
-      className={`w-full max-w-sm  flex flex-col items-center relative ${
+      className={`w-full max-w-sm flex flex-col items-center relative ${
         props.bgColor
-      } text-${props.textColor} p-0 m-0 text-center  ${
+      } text-${props.textColor} p-0 m-0 text-center ${
+        !props.bgImage?.url ? "h-full" : ""
+      } ${
         props.bgImage?.url &&
-        "bg-cover bg-center bg-no-repeat h-[30rem]  flex flex-col justify-end"
+        "bg-cover bg-center bg-no-repeat h-[30rem] flex flex-col justify-end"
       } ${props.bgImage?.url && props.btnLink && "cursor-pointer"} ${
         props.imageRound && "rounded-3xl"
       }`}

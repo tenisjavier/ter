@@ -18,12 +18,12 @@ const ColumnSection = (props: ColumnSectionT) => {
   const contentSection = (isCompact = false) => (
     <>
       <RenderIf condition={props.title}>
-        <h2 className="text-left text-4xl w-full">
+        <h2 className="text-center text-4xl w-full">
           {textHighlighter(props.title || "")}
         </h2>
       </RenderIf>
       <RenderIf condition={props.desc}>
-        <p className="text-left text-lg w-full mt-6">
+        <p className="text-center text-lg w-full mt-6">
           {textHighlighter(props.desc || "")}
         </p>
       </RenderIf>
@@ -61,7 +61,7 @@ const ColumnSection = (props: ColumnSectionT) => {
         </RenderIf>
         <RenderIf condition={!props.isCarousel}>
           <div
-            className={`grid grid-cols-1 md:grid-cols-2 lg:${props.gridCols} gap-2 mt-12 w-full place-items-center`}
+            className={`grid grid-cols-1 md:grid-cols-2 lg:${props.gridCols} gap-2 mt-12 w-full items-stretch justify-items-center`}
           >
             {props.columns.map((col, index) => {
               return <Card {...col} isCompact={isCompact} key={index}></Card>;
@@ -83,7 +83,7 @@ const ColumnSection = (props: ColumnSectionT) => {
           <div className="w-full container mx-auto">
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
               {/* Image on left (desktop) / top (mobile) */}
-              <div className="w-full lg:w-2/5 flex-shrink-0">
+              <div className="w-full lg:w-2/5 shrink-0">
                 <ImageComponent
                   src={props.terImage?.url || ""}
                   alt={

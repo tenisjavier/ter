@@ -34,16 +34,8 @@ const menuItems: MenuItem[] = [
     href: "/proyectos",
     children: [
       {
-        title: "Buses Vule Santiago",
-        href: "/buses-vule-santiago",
-      },
-      {
         title: "Buses Valparaíso",
         href: "/buses-valparaiso",
-      },
-      {
-        title: "Buses RBU Santiago",
-        href: "/buses-rbu-santiago",
       },
       {
         title: "Buses Tocopilla",
@@ -53,11 +45,19 @@ const menuItems: MenuItem[] = [
         title: "Buses Copiapó",
         href: "/buses-copiapo",
       },
+      {
+        title: "Buses Vule Santiago",
+        href: "/buses-vule-santiago",
+      },
+      {
+        title: "Buses RBU Santiago",
+        href: "/buses-rbu-santiago",
+      },
     ],
   },
   {
     title: "Conócenos",
-    href: "/conocenos",
+    href: "/#ter.home.equipo",
   },
   {
     title: "Contacto",
@@ -80,7 +80,7 @@ const ListItem = React.forwardRef<
           ref={ref}
           className={cn(
             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-destacado hover:text-white text-white text-3xl ",
-            className
+            className,
           )}
           {...props}
         >
@@ -106,7 +106,7 @@ interface NavigationMenuProps {
 function MobileMenu({ items = menuItems }: NavigationMenuProps) {
   const [isOpen, setIsOpen] = React.useState(false);
   const [expandedItems, setExpandedItems] = React.useState<Set<string>>(
-    new Set()
+    new Set(),
   );
 
   const toggleExpanded = (itemTitle: string) => {
