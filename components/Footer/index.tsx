@@ -45,23 +45,16 @@ const Footer: React.FC = () => {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="/conocenos"
+                    href="/#ter.home.equipo"
                     className="text-sm hover:text-destacado transition-colors"
                   >
                     Conócenos
                   </Link>
                 </li>
+
                 <li>
                   <Link
-                    href="/sustentabilidad"
-                    className="text-sm hover:text-destacado transition-colors"
-                  >
-                    Sostenibilidad
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/proyectos"
+                    href="/#ter.home.columns-4"
                     className="text-sm hover:text-destacado transition-colors"
                   >
                     Proyectos

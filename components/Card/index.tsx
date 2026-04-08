@@ -151,8 +151,8 @@ const Card = (props: CardT) => {
       <RenderIf condition={!props.bgImage?.url}>
         {props.btnLink ? (
           <Link href={props.btnLink}>
-            <div className={`flex items-center justify-center ${props.isImageFull ? "h-64" : "h-32"}`}>
-              {props.image && (
+            {props.image && (
+              <div className={`flex items-center justify-center ${props.isImageFull ? "h-64" : "h-32"}`}>
                 <ImageComponent
                   src={props.image.url}
                   alt={props.image.description}
@@ -164,12 +164,12 @@ const Card = (props: CardT) => {
                   width={400}
                   height={400}
                 ></ImageComponent>
-              )}
-            </div>
+              </div>
+            )}
           </Link>
         ) : (
-          <div className={`flex items-center justify-center ${props.isImageFull ? "h-64" : "h-32"}`}>
-            <RenderIf condition={props.image}>
+          <RenderIf condition={props.image}>
+            <div className={`flex items-center justify-center ${props.isImageFull ? "h-64" : "h-32"}`}>
               <ImageComponent
                 src={props.image?.url || ""}
                 alt={props.image?.description || ""}
@@ -181,8 +181,8 @@ const Card = (props: CardT) => {
                 width={400}
                 height={400}
               ></ImageComponent>
-            </RenderIf>
-          </div>
+            </div>
+          </RenderIf>
         )}
 
         <div
