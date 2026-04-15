@@ -143,7 +143,7 @@ const Footer: React.FC = () => {
         {/* Copyright Section */}
         <div className="border-t border-white/20 mt-12 pt-6">
           <p className="text-white text-center text-sm">
-            © 2023 TER INVERSIONES | TODOS LOS DERECHOS RESERVADOS
+            © 2026 TER INVERSIONES | TODOS LOS DERECHOS RESERVADOS
           </p>
         </div>
       </div>
