@@ -34,10 +34,10 @@ const ColumnSection = (props: ColumnSectionT) => {
               align: "start",
               loop: true,
             }}
-            className="w-full p-0 mb-8 lg:mb-0relative justify-center items-center mt-12 lg:mt-0"
+            className="w-full p-0 mb-8 lg:mb-0 relative justify-center items-center mt-10 lg:mt-0"
           >
             <div className={`w-full`}>
-              <CarouselContent className="m-0 p-0 lg:px-2 lg:mt-24 ">
+              <CarouselContent className="m-0 p-0 lg:px-2 lg:mt-10 ">
                 {props.columns.map((col, index) => {
                   return (
                     <CarouselItem
